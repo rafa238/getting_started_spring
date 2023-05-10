@@ -6,8 +6,20 @@
 	</head>
 	<body>
 		<h1>Hello from my first Spring boot application</h1>
-		<!-- This is the way to do an ankle -->
-		<a th:href="@{/params/string(param='This is a param')}">Link to param</a>
-		<a th:href="@{/params/mix-params(greeting='Hello mix-params', num=777)}">Link to Mix-param</a>
+		<!-- This is the way to do an ankle using params and path variables -->
+		<ul>
+			<li>
+				<a th:href="@{/params/string(param='This is a param')}">Link to param</a>
+			</li>
+			<li>
+				<a th:href="@{/params/mix-params(greeting='Hello mix-params', num=777)}">Link to Mix-param</a>	
+			</li>
+			<li>
+				<a th:href="@{/variable/string/} + 'Hello variable' ">Link to variable</a>
+			</li>	
+			<li>
+				<a th:href="@{/variable/mix-variables/} + 'Hello variables' + '/' + 7 ">Link to mix-variable</a>
+			</li>
+		</ul>
 	</body>
 </html>
