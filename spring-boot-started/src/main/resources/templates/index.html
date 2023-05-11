@@ -3,11 +3,18 @@
 	<head>
 		<meta charset="UTF-8">
 		<title th:text="${title}">Insert title here</title>
+		<style type="text/css" th:href="@{/css/styles.css}"></style>
 	</head>
 	<body>
 		<h1>Hello from my first Spring boot application</h1>
 		<!-- This is the way to do an ankle using params and path variables -->
 		<ul>
+			<li>
+				<a th:href="@{/app/list}">User list</a>
+			</li>
+			<li>
+				<a th:href="@{/app/profile}">Profile list</a>
+			</li>
 			<li>
 				<a th:href="@{/params/string(param='This is a param')}">Link to param</a>
 			</li>
@@ -20,6 +27,7 @@
 			<li>
 				<a th:href="@{/variable/mix-variables/} + 'Hello variables' + '/' + 7 ">Link to mix-variable</a>
 			</li>
+			<img th:src="@{/images/spring.png}" ></img>
 		</ul>
 	</body>
 </html>
